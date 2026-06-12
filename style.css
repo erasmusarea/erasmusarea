@@ -1,20 +1,12 @@
 /* HAREKETLİ ARKA PLAN GRADIENT */
 @keyframes movingGradient {
-    0% {
-        background-position: 0% 0%;
-    }
-    50% {
-        background-position: 100% 100%;
-    }
-    100% {
-        background-position: 0% 0%;
-    }
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
 }
 
 /* GLOBAL */
-* {
-    box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
     margin: 0;
@@ -66,11 +58,10 @@ body.dark {
 }
 
 .school-logo {
-    width: 120px;   /* önce 80'di, şimdi 120 yaptık */
+    width: 120px;
     height: auto;
     margin-bottom: 10px;
 }
-
 
 .title {
     font-size: 36px;
@@ -116,12 +107,6 @@ body.dark {
     border: 2px solid #5b3fd9;
 }
 
-.btn.ghost {
-    background: transparent;
-    color: #ff4f81;
-    border: 2px dashed #ff4f81;
-}
-
 .btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
@@ -129,11 +114,10 @@ body.dark {
 
 /* LOGO STRIP */
 .logo-strip img {
-    width: 90px;   /* önce 60'tı, şimdi 90 yaptık */
+    width: 90px;
     height: auto;
     transition: transform 0.3s ease, filter 0.3s ease;
 }
-
 
 .logo-strip img:hover {
     transform: rotate(-3deg) scale(1.15);
@@ -220,7 +204,7 @@ h2 {
 }
 
 /* CARDS */
-.card, .activity-card, .partner-card {
+.card, .activity-card {
     background: #fdf7ff;
     border-radius: 16px;
     padding: 18px;
@@ -228,66 +212,9 @@ h2 {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.card:hover, .activity-card:hover, .partner-card:hover {
+.card:hover, .activity-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 10px 25px rgba(91,63,217,0.15);
-}
-
-/* STATS */
-.stat {
-    background: #f7ecff;
-    border-radius: 16px;
-    padding: 20px;
-}
-
-.stat-number {
-    font-size: 32px;
-    color: #5b3fd9;
-    font-weight: bold;
-}
-
-/* GALLERY */
-.gallery-item {
-    background: #ffe6f2;
-    color: #ff4f81;
-    border-radius: 14px;
-    height: 120px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-}
-
-.gallery-item:hover {
-    transform: scale(1.05);
-}
-
-/* LIGHTBOX */
-.lightbox {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.85);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 200;
-}
-
-.lightbox img {
-    max-width: 90%;
-    max-height: 80%;
-    border-radius: 12px;
-}
-
-#lightboxClose {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    color: white;
-    font-size: 32px;
-    cursor: pointer;
 }
 
 /* FAQ */
@@ -355,13 +282,8 @@ footer {
     transition: all 0.8s ease-out;
 }
 
-.slide-left {
-    transform: translateX(-40px);
-}
-
-.slide-right {
-    transform: translateX(40px);
-}
+.slide-left { transform: translateX(-40px); }
+.slide-right { transform: translateX(40px); }
 
 .visible {
     opacity: 1;
