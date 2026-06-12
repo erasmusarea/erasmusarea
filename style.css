@@ -1,0 +1,369 @@
+/* HAREKETLİ ARKA PLAN GRADIENT */
+@keyframes movingGradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+/* GLOBAL */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #ffe6f2, #f3e9ff, #e6f0ff, #ffe6f2);
+    background-size: 400% 400%;
+    animation: movingGradient 18s ease infinite;
+    scroll-behavior: smooth;
+    color: #2b2b3c;
+    transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* DARK MODE */
+body.dark {
+    background: radial-gradient(circle at top, #1a1033 0, #050816 60%, #02030a 100%);
+    color: #e0e4ff;
+}
+
+/* TOP BAR */
+.top-bar {
+    background: linear-gradient(90deg, #5b3fd9, #ff4f81);
+    color: #fff;
+    text-align: center;
+    padding: 8px 10px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#darkModeToggle {
+    border: none;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px 8%;
+    background: linear-gradient(135deg, #ffffff 0%, #f3e9ff 40%, #ffe6f2 100%);
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+.school-logo {
+    width: 120px;   /* önce 80'di, şimdi 120 yaptık */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+
+.title {
+    font-size: 36px;
+    color: #5b3fd9;
+    margin: 10px 0;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 22px;
+    color: #ff4f81;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.hero-text {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* BUTTONS */
+.btn {
+    padding: 12px 20px;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn.primary {
+    background: linear-gradient(135deg, #5b3fd9, #ff4f81);
+    color: white;
+    box-shadow: 0 6px 15px rgba(91, 63, 217, 0.4);
+}
+
+.btn.secondary {
+    background: white;
+    color: #5b3fd9;
+    border: 2px solid #5b3fd9;
+}
+
+.btn.ghost {
+    background: transparent;
+    color: #ff4f81;
+    border: 2px dashed #ff4f81;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* LOGO STRIP */
+.logo-strip img {
+    width: 90px;   /* önce 60'tı, şimdi 90 yaptık */
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+
+.logo-strip img:hover {
+    transform: rotate(-3deg) scale(1.15);
+    filter: brightness(1.2);
+}
+
+/* HERO INFO CARD */
+.hero-info-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(91, 63, 217, 0.15);
+    border: 1px solid #e0d4ff;
+}
+
+/* BADGES */
+.badge {
+    background: linear-gradient(135deg, #ff4f81, #ff9a62);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+}
+
+/* NAVBAR */
+nav {
+    background: #5b3fd9;
+    padding: 12px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: padding 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav.shrink {
+    padding: 5px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    background: #3b2aa0;
+}
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* SECTIONS */
+section {
+    background: rgba(255,255,255,0.95);
+    margin: 25px auto;
+    padding: 30px;
+    width: 85%;
+    max-width: 1100px;
+    border-radius: 22px;
+    border: 1px solid rgba(91,63,217,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+h2 {
+    color: #5b3fd9;
+    margin-top: 0;
+    font-size: 28px;
+}
+
+/* TAGS */
+.tag-list li {
+    background: #ffe6f2;
+    color: #ff4f81;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 13px;
+}
+
+/* CARDS */
+.card, .activity-card, .partner-card {
+    background: #fdf7ff;
+    border-radius: 16px;
+    padding: 18px;
+    border: 1px solid #e6d9ff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover, .activity-card:hover, .partner-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(91,63,217,0.15);
+}
+
+/* STATS */
+.stat {
+    background: #f7ecff;
+    border-radius: 16px;
+    padding: 20px;
+}
+
+.stat-number {
+    font-size: 32px;
+    color: #5b3fd9;
+    font-weight: bold;
+}
+
+/* GALLERY */
+.gallery-item {
+    background: #ffe6f2;
+    color: #ff4f81;
+    border-radius: 14px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+/* LIGHTBOX */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 12px;
+}
+
+#lightboxClose {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+/* FAQ */
+.faq-item {
+    border-radius: 14px;
+    border: 1px solid #e6d9ff;
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 12px 15px;
+    background: #f3e9ff;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    background: white;
+    padding: 0 15px;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+    padding: 12px 15px;
+}
+
+/* FOOTER */
+footer {
+    background: linear-gradient(90deg, #5b3fd9, #ff4f81);
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 14px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+
+/* BACK TO TOP */
+#backToTop {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    background: linear-gradient(135deg, #5b3fd9, #ff4f81);
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* ANIMATIONS */
+.fade-in, .slide-left, .slide-right {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-out;
+}
+
+.slide-left {
+    transform: translateX(-40px);
+}
+
+.slide-right {
+    transform: translateX(40px);
+}
+
+.visible {
+    opacity: 1;
+    transform: translate(0,0);
+}
